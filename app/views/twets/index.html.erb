@@ -8,7 +8,7 @@
 <% @twets.each do |twet| %>
   <tr>
     <td><%= twet.content %></td>
-
+    <td><%= link_to "編集する", edit_twet_path(twet.id) %></td>
   </tr>
 <% end %>
 </table>
