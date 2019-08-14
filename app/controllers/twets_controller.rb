@@ -16,6 +16,10 @@ class TwetsController < ApplicationController
     end
   end
 
+  def edit
+    @twet =Twet.find(params[:id])
+  end
+
   private
 
   def twet_params
