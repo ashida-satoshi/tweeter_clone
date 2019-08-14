@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'twets/index'
+  #get 'twets/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :twets
+  
 end
