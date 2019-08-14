@@ -1,5 +1,6 @@
 class TwetsController < ApplicationController
   def index
+    @twets = Twet.all
   end
 
   def new
