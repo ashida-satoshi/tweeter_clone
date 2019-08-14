@@ -8,8 +8,12 @@ class TwetsController < ApplicationController
   end
 
   def create
-    Twet.create(twet_params)
-    redirect_to new_twet_path
+    @twet = Twet.new(twet_params)
+    if @twet.save
+      redirect_to twets_path, notice: "投稿しました！"
+    else
+      render "new"
+    end
   end
 
   private
