@@ -1,0 +1,10 @@
+<h3>以下の内容でツイートする</h3>
+
+<%= form_with(model: @twet, url: twets_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>本文:<%= @twet.content %></p>
+
+  <%= form.submit "ツイートする" %>
+  <%= form.submit "戻る", name: 'back' %>
+<% end %>

@@ -10,10 +10,14 @@ class TwetsController < ApplicationController
 
   def create
     @twet = Twet.new(twet_params)
-    if @twet.save
-      redirect_to twets_path, notice: "投稿しました！"
+    if params[:back]
+      render :new
     else
-      render "new"
+      if @twet.save
+        redirect_to twets_path, notice: "投稿しました！"
+      else
+        render "new"
+      end
     end
   end
 
@@ -28,15 +32,20 @@ class TwetsController < ApplicationController
   def update
     #@twet = Twet.find(params[:id])
     if @twet.update(twet_params)
-      redirect_to twet_path, notice: "編集しました！"
+      redirect_to twets_path, notice: "編集しました！"
     else
       render 'edit'
     end
   end
 
+  def confirm
+    @twet = Twet.new(twet_params)
+    render :new if @twet.invalid?
+  end
+
   def destroy
     @twet.destroy
-    redirect_to twets_path, notice:"ブログを削除しました！"
+    redirect_to twets_path, notice:"削除しました！"
   end
 
   private
