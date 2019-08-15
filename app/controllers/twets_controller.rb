@@ -1,5 +1,5 @@
 class TwetsController < ApplicationController
-  before_action :set_twet, only: [:show, :edit, :update]
+  before_action :set_twet, only: [:show, :edit, :update, :destroy]
   def index
     @twets = Twet.all
   end
@@ -32,6 +32,11 @@ class TwetsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @twet.destroy
+    redirect_to twets_path, notice:"ブログを削除しました！"
   end
 
   private
