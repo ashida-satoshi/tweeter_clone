@@ -1,4 +1,5 @@
 class TwetsController < ApplicationController
+  before_action :set_twet, only: [:show, :edit, :update]
   def index
     @twets = Twet.all
   end
@@ -17,19 +18,19 @@ class TwetsController < ApplicationController
   end
 
   def show
-    @twet =Twet.find(params[:id])
+    #@twet =Twet.find(params[:id])
   end
 
   def edit
-    @twet =Twet.find(params[:id])
+    #@twet =Twet.find(params[:id])
   end
 
   def update
-    @twet = Twet.find(params[:id])
+    #@twet = Twet.find(params[:id])
     if @twet.update(twet_params)
       redirect_to twet_path, notice: "編集しました！"
     else
-      render :edit
+      render 'edit'
     end
   end
 
@@ -37,5 +38,9 @@ class TwetsController < ApplicationController
 
   def twet_params
     params.require(:twet).permit(:content)
+  end
+
+  def set_twet
+    @twet = Twet.find(params[:id])
   end
 end
