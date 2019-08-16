@@ -1,19 +1,24 @@
-<h1>ツイート一覧</h1>
+<header class= "header">
+  ツイート一覧
+</header>
 
-<p><%= notice %></p>
 
-<table>
-  <tr>
-    <th>内容</th>
-  </tr>
+  <p><%= notice %></p>
 
-<% @twets.each do |twet| %>
-  <tr>
-    <td><%= twet.content %></td>
-    <td><%= link_to "編集します！", edit_twet_path(twet.id), data:{confirm: "本当に編集していいですか？"} %></td>
-    <td><%= link_to "削除します！", twet_path(twet.id), method: :delete, data:{confirm: "本当に削除していいですか？"} %></td>
-  </tr>
-<% end %>
-</table>
+  <table>
+    <tr>
+      <th>内容</th>
+    </tr>
 
-<%= link_to '新規投稿画面',new_twet_path %>
+  <% @twets.each do |twet| %>
+    <tr>
+      <td><%= twet.content %></td>
+      <td><%= link_to "編集します！", edit_twet_path(twet.id), data:{confirm: "本当に編集していいですか？"} %></td>
+      <td><%= link_to "削除します！", twet_path(twet.id), method: :delete, data:{confirm: "本当に削除していいですか？"} %></td>
+    </tr>
+  <% end %>
+  </table>
+  </div>
+  <%= link_to '新規投稿画面',new_twet_path %>
+  <br>
+  <br>
