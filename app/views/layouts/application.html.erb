@@ -8,8 +8,23 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+    
   <body>
-    <%= yield %>
+  <header>
+  <nav class = "navbar navbar-default">
+    <div class = "container-fluid">
+      <a class="navbar-brand" href="/twets/new">Twets</a>
+        <ul class="nav navbar-nav">
+        </ul>
+    </div>
+  </nav>
+</header>
+  <%= yield %>
+  <footer>
+  <p>運営会社DIVE INTO CODE</p>
+  <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
+  </footer>  
   </body>
+
+
 </html>

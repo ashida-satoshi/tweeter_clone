@@ -1,0 +1,65 @@
+html{
+    min-height:100%;
+    position:relative;
+}
+
+body{
+    height:100%;
+}
+
+
+
+.container{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.container-fluid {
+    background-color: #00CCFF;
+}
+
+.btn{
+   margin-left:25px;
+}
+
+.btn-success{
+    background-color:#00CCFF;
+}
+
+.panel p{
+    height:50px;
+    width:600px;
+    border: thin solid;
+    font-size:22px;
+    word-wrap: break-word;
+}
+
+footer{
+    position:absolute;
+    width:100%;
+    height:100px;
+    background-color:#00CCFF;
+    text-align:center;
+    bottom:0;
+    padding:10px;
+}
+
+footer p{
+    line-height:20px;
+    margin:10px;
+}
+
+input[type="text"] {
+    width: 600px;
+    height: 50px;
+    margin:50px;
+}
+
+input[type="submit"]{
+    width:100px;
+    margin:15px;
+}
+
+
+
+
