@@ -1,15 +1,15 @@
-
-  <p><%= notice %></p>
+  <h3><%= notice %></h3>
+  <br>
   <%= link_to '新規投稿画面',new_twet_path, class: 'btn btn-success' %>
   <div class="container">
     <h1>つぶやき一覧</h1>
   <% @twets.each do |twet| %>
     <div class="panel">
       <p><%= twet.content %></p>
-      <div class = "link">
-      <%= link_to "編集します！", edit_twet_path(twet.id), data:{confirm: "本当に編集していいですか？"} %>
-      <%= link_to "削除します！", twet_path(twet.id), method: :delete, data:{confirm: "本当に削除していいですか？"} %>
-      </div>
+        <div class = "link">
+        <%= link_to "編集します！", edit_twet_path(twet.id), data:{confirm: "本当に編集していいですか？"} %>
+        <%= link_to "削除します！", twet_path(twet.id), method: :delete, data:{confirm: "本当に削除していいですか？"} %>
+        </div>
     </div>
   <% end %>
   </div>

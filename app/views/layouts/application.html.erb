@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TwTask</title>
+    <title>Tw_Task</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name= "viewport" content="width"=device-width>
@@ -10,23 +10,23 @@
   </head>
 
   <body>
-  <header>
-  <nav class = "navbar navbar-default">
-    <div class = "container-fluid">
-      <a class="navbar-brand" href="/twets/new">Twets</a>
-        <ul class="nav navbar-nav">
-        </ul>
-    </div>
-  </nav>
-</header>
-  <%= image_tag 'images.jpg', :size =>'100x100' %>
-  <%= yield %>
-  <%= image_tag 'images.jpg', :size =>'100x100' %>
-  <footer>
-  <p>運営会社DIVE INTO CODE</p>
-  <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
-  </footer>  
+    <header>
+      <nav class = "navbar navbar-default">
+        <div class = "container-fluid">
+          <a class="navbar-brand" href="/twets/new">Twets</a>
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+      <%= image_tag 'images.jpg', :size =>'100x100' %>
+    <%= yield %>
+      <%= image_tag 'images.jpg', :size =>'100x100' %>
+      
+    <footer>
+      <p>運営会社DIVE INTO CODE</p>
+      <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
+    </footer>  
   </body>
-
-
 </html>
