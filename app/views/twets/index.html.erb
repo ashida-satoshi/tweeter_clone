@@ -1,6 +1,8 @@
   <h3><%= notice %></h3>
   <br>
+  <div class = "new">
   <%= link_to '新規投稿画面',new_twet_path, class: 'btn btn-success' %>
+  </div>
   <div class="container">
     <h1>つぶやき一覧</h1>
   <% @twets.each do |twet| %>

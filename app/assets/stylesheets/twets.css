@@ -5,6 +5,7 @@ html{
 
 body{
     height:100%;
+    text-align: center;
 }
 
 .container{
@@ -16,19 +17,22 @@ body{
     background-color: #00CCFF;
 }
 
+
+
 .btn{
-   margin-left:25px;
+   margin-left:10px;
 }
 
 .btn-success{
     background-color:#00CCFF;
 }
 
+
 .panel p{
-    height:50px;
-    width:600px;
+    height:100px;
+    width:800px;
     border: thin solid;
-    font-size:22px;
+    font-size:20px;
     word-wrap: break-word;
 }
 
@@ -57,7 +61,7 @@ input[type="text"] {
 
 input[type="submit"]{
     width:100px;
-    margin:15px;
+    margin:30px;
 }
 
 
