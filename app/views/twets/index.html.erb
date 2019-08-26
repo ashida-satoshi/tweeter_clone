@@ -6,7 +6,7 @@
   <div class="container">
     <h1>つぶやき一覧</h1>
   <% @twets.each do |twet| %>
-    <div class="panel">
+    <div class= "panel">
       <p><%= twet.content %></p>
         <div class = "link">
         <%= link_to "編集します！", edit_twet_path(twet.id), data:{confirm: "本当に編集していいですか？"} %>
@@ -15,6 +15,7 @@
     </div>
   <% end %>
   </div>
+  
 
 
   

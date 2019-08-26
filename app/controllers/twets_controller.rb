@@ -22,15 +22,12 @@ class TwetsController < ApplicationController
   end
 
   def show
-    #@twet =Twet.find(params[:id])
   end
 
   def edit
-    #@twet =Twet.find(params[:id])
   end
 
   def update
-    #@twet = Twet.find(params[:id])
     if @twet.update(twet_params)
       redirect_to twets_path, notice: "編集しました！"
     else

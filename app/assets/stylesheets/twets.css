@@ -8,29 +8,40 @@ body{
     text-align: center;
 }
 
+ul{
+    list-style: none;
+}
+
+
 .container{
-    margin-left: auto;
-    margin-right:auto;
+   margin-top:30px;
+   height:auto;
+   padding-bottom:100px;
+   margin-bottom:50px;
+}
+
+button, input, optgroup, select, textarea {
+    text-align: center;
 }
 
 .container-fluid {
     background-color: #00CCFF;
 }
 
-
-
 .btn{
    margin-left:10px;
+   margin-bottom:10px;
 }
 
 .btn-success{
     background-color:#00CCFF;
+    margin-bottom:120px;
 }
 
 
 .panel p{
-    height:100px;
-    width:800px;
+    height:50px;
+    width:100%;
     border: thin solid;
     font-size:20px;
     word-wrap: break-word;
@@ -52,7 +63,6 @@ footer p{
 }
 
 
-
 input[type="text"] {
     width: 600px;
     height: 50px;
@@ -62,6 +72,7 @@ input[type="text"] {
 input[type="submit"]{
     width:100px;
     margin:30px;
+    font-size:5px;
 }
 
 
